@@ -71,6 +71,24 @@ const cipher = {
     d: 5
   };
  let decoder = 'craft block argon meter bells brown croon droop';
-console.log(decode(decoder, cipher));
+//console.log(decode(decoder, cipher));
 
 //lotr factory functions
+function createCharacter(name, nickname, race, origin, attack, defense){
+    return {
+        name, 
+        nickname, 
+        race, 
+        origin, 
+        attack, 
+        defense,
+        describe(){
+            console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
+        },
+        evaluateFight(character){
+            
+        }
+
+    }
+
+}
