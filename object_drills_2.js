@@ -48,6 +48,29 @@ function array (myArray){
             }
     }
 }
-array(myArray);
+//array(myArray);
 
-//
+//cracking the code
+
+function decode(string, object) {
+  let result = [];
+  let array = string.split(' ');
+  for (let i = 0; i < array.length; i++) {
+    for (let key in object) {
+      if (array[i][0] === key) {
+        result.push(array[i][object[key] - 1]);
+      }
+    }
+  }
+  return result;
+}
+const cipher = {
+    a: 2,
+    b: 3,
+    c: 4,
+    d: 5
+  };
+ let decoder = 'craft block argon meter bells brown croon droop';
+console.log(decode(decoder, cipher));
+
+//lotr factory functions
