@@ -85,10 +85,9 @@ function createCharacter(name, nickname, race, origin, attack, defense){
         describe(){
             console.log(`${this.name} is a ${this.race} from ${this.origin}.`);
         },
-        evaluateFight(character){
-            
-        }
-
-    }
-
+        evaluateFight(opp) {
+            return `Your opponent takes ${ opp.defense >= this.attack ? 0 : this.attack - opp.defense} 
+            damage and you receive ${ this.defense >= opp.attack ? 0 : opp.attack - this.defense} damage`; 
+          }
+    };
 }
